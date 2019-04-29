@@ -3,10 +3,15 @@ from app import app
 from app.forms import QueryForm
 
 
-@app.route('/', methods=['GET', 'POST'])
-@app.route('/index/', methods=['GET', 'POST'])
+@app.route('/')
+@app.route('/index/')
 def index():
     form = QueryForm()
-    if form.validate_on_submit():
-        flash('GrandPy a entendu la question !')
     return render_template('index.html', form=form)
+
+
+@app.route('/formdata/', methods=['POST'])
+#@crossdomain(origin='*')
+def buildAndSendLocationData():
+    flash('GrandPy a entendu la question !')
+    return jsonify(request.form)
