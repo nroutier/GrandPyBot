@@ -1,0 +1,82 @@
+body
+{
+    background-color: #8DD0EE;
+    color: #615F4E;
+    margin: auto;
+    min-height: 100vh; 
+}
+
+header
+{
+    text-align: center;
+    background-color: #59727E;
+    color: #E0D57A;
+}
+
+section
+{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content
+{
+    padding: 10px;
+}
+
+.flex-grow 
+{
+    flex: 1;
+}
+ 
+#logo
+{
+    width: 100px;
+    height: auto;
+}
+
+footer
+{
+    background-color: #59727E;
+    color: #E0D57A;   
+}
+
+.btn-default
+{
+    color: #E0D57A
+}
+
+.btn-primary
+{
+    background-color: #59727E;
+    color: #E0D57A;
+}
+
+.user-dialog 
+{
+    color: black;
+    background-color: white;
+    /*width: 75%;*/
+    padding: 15px;
+    opacity: 0.5;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.grandpy-dialog
+{  
+    color: black;
+    background-color: white;
+    opacity: 0.5;
+    /*width: 75%;*/
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: right; 
+}
+

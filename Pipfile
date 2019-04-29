@@ -10,6 +10,7 @@ pylint = "*"
 flask = "*"
 pytest = "*"
 flask-wtf = "*"
+flask-bs4 = "*"
 
 [requires]
 python_version = "3.7"

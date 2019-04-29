@@ -1,18 +1,32 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Le site de GrandPy">
+{% extends 'bootstrap/base.html' %}
+
+{% block styles %}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='img/logo.png')}}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+{% endblock %}
+
+{% block title %}
+    GrandPy Bot 
+{% endblock %}
+
+<!-- <!DOCTYPE html> -->
+<!-- <html> -->
+    <!-- <head> -->
+        <!-- <meta charset="utf-8" /> -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+        <!-- <meta name="description" content="Le site de GrandPy"> -->
         <!-- <link rel="shortcut icon" href="../static/img/logo.png"> -->
-        <title>GrandPy Bot</title>
+        <!-- <title>GrandPy Bot</title> -->
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+        <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
         <!-- <link rel="stylesheet" href="../static/style.css"/> -->
-    </head>
+    <!-- </head> -->
 
-    <body class="d-flex flex-column">
+{% block content %}
+    <div class="d-flex flex-column">
         
         <header class="container-fluid">
             <div class="row">
@@ -21,7 +35,7 @@
                     <p>Un papi qui en sait long en géographie !</p>        
                 </div>
                 <div class="d-none d-sm-block col-md-2">
-                    <a href="#" class="float-right"><img id="logo" src="../static/img/logo.png" alt="GrandPyLogo"></a>
+                    <a href="#" class="float-right"><img id="logo" src="{{url_for('static', filename='img/logo.png')}}" alt="GrandPyLogo"></a>
                 </div>
             </div>
         </header>
@@ -34,7 +48,8 @@
         </ul>
         {% endif %}
         {% endwith %}
-        {% block content %}{% endblock %}
+
+        {% block app_content %}{% endblock %}
                 
         <footer class="mt-4">
             <div class="container-fluid py-3">
@@ -42,10 +57,16 @@
                     Nicolas Routier
                     <a class="btn btn-default" href="https://www.linkedin.com/in/nicolas-routier-85919b109/"><i class="fa fa-linkedin-square fa-2x"></i></a>
                     <a class="btn btn-default" href="https://github.com/nroutier/GrandPyBot"><i class="fa fa-github fa-2x"></i></a>
+                    <!-- <button class ="btn">
+                        <a href="https://github.com/nroutier/GrandPyBot">
+                            <img src="{{url_for('static', filename='img/github-square-brands.svg')}}">
+                        </a>
+                    </button> -->                    
                 </div>
             </div>
         </footer>
         </div>
             <!-- <script src="../static/script.js"></script> -->
-    </body>
-</html>
+    </div>
+<!-- </html> -->
+{% endblock %}
