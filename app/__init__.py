@@ -3,18 +3,18 @@ from config import Config
 import logging
 from logging.handlers import RotatingFileHandler
 import os
-from flask_bs4 import Bootstrap
-from flask_fontawesome import FontAwesome
+# from flask_bs4 import Bootstrap
+# from flask_fontawesome import FontAwesome
 
-bootstrap = Bootstrap()
-fontawesome = FontAwesome()
+# bootstrap = Bootstrap()
+# fontawesome = FontAwesome()
 
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(Config)
 
-    bootstrap.init_app(app)
-    fontawesome.init_app(app)
+    # bootstrap.init_app(app)
+    # fontawesome.init_app(app)
 
     from app.errors import bp as errors_bp
     app.register_blueprint(errors_bp)
