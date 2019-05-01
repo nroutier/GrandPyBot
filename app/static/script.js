@@ -12,7 +12,7 @@ dialogForm.addEventListener("submit", e => {
     createDialDiv(dialogForm.elements.place.value, "user-dialog");
     let query = new FormData(dialogForm);
         
-    fetch(`${window.origin}/query`, {
+    fetch(`${window.origin}/query/`, {
         method: 'post',
         body: query,
         cache: "no-cache"
