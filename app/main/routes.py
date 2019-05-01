@@ -14,6 +14,6 @@ def index():
 def returning_location():
     print(request.form)
     req = request.form['query']
-    print(req)
+    # print(req)
     res = make_response(jsonify({"req": req}), 200)
     return res

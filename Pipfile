@@ -10,6 +10,8 @@ pylint = "*"
 flask = "*"
 pytest = "*"
 flask-wtf = "*"
+nltk = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"
