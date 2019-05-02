@@ -25,7 +25,8 @@ dialogForm.addEventListener("submit", e => {
         }
         response.json().then(function(data) {
             console.log(data);
-            createDialDiv(data.req, "grandpy-dialog")
+            // createDialDiv(data.req, "grandpy-dialog")
+            createDialDiv(data.res, "grandpy-dialog")
         }); 
     })
     .catch(function(error) {
