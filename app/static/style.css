@@ -3,7 +3,7 @@ body
     background-color: #8DD0EE;
     color: #615F4E;
     margin: auto;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
 header
@@ -11,12 +11,18 @@ header
     text-align: center;
     background-color: #59727E;
     color: #E0D57A;
+    position: fixed;
 }
 
 section
 {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 55px;
+}
+
+#dialog
+{ 
+    margin-top: 5px;
 }
 
 .content
@@ -62,7 +68,8 @@ footer
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    margin-top: 55px;
     text-align: left;
 }
 
