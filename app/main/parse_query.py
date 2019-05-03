@@ -3,7 +3,6 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
 import string
-import requests
 
 # query = "Salut GrandPy ! Est-ce que tu connais l'adresse d'OpenClassrooms ?"
 query = "Yo tu peux me trouver le 1 rue de la véga à paris"
