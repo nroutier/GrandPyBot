@@ -12,6 +12,7 @@ pytest = "*"
 flask-wtf = "*"
 nltk = "*"
 requests = "*"
+wikipedia = "*"
 
 [requires]
 python_version = "3.7"
