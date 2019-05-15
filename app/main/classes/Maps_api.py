@@ -13,9 +13,6 @@ class Maps_api:
     def __init__(self, query):
         payload = {
             'key': os.environ.get('MAPS_KEY'),
-            # 'key_static_maps': os.environ.get('STATIC_MAPS_KEY'),
-            # 'key': current_app.config['MAPS_KEY'],
-            # 'key_static_maps': current_app.config['STATIC_MAPS_KEY'],
             'address': query.replace(" ", "%"),
             'region': "fr",
             'country': "fr"
@@ -50,5 +47,3 @@ class Maps_api:
         key_static_maps = os.environ.get('STATIC_MAPS_KEY')
         map_url = 'https://maps.googleapis.com/maps/api/staticmap?center=' + coord_url + '&zoom=15&size=400x400&markers=color:red%7C' + coord_url + '&key=' + key_static_maps
         return map_url
-
-# https://maps.googleapis.com/maps/api/staticmap?center=48.8747265,2.3505517&zoom=15&size=400x400&markers=color:red%7C48.8747265,2.3505517&key=AIzaSyB1ivVXw2uqOy4WxG1721mt95ZjAPUPc2Q
