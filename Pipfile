@@ -13,6 +13,7 @@ flask-wtf = "*"
 nltk = "*"
 requests = "*"
 wikipedia = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.7"

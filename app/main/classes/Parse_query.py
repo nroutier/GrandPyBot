@@ -31,5 +31,3 @@ class Parse_query:
         stem_process += [word for word in query if not stemmer.stem(word) in stem_verbs]
         query = " ".join(stem_process)
         return query
-
-# parse_query(query)

@@ -2,9 +2,10 @@
 
 """ Module that defines the class Maps_api"""
 
-import os
+from flask import current_app
 import requests
 import json
+import os
 
 class Maps_api:
     """ Class used to get address, route and coordinates from Google Geocode Api """
@@ -12,7 +13,9 @@ class Maps_api:
     def __init__(self, query):
         payload = {
             'key': os.environ.get('MAPS_KEY'),
-            'key_static_maps': os.environ.get('STATIC_MAPS_KEY'),
+            # 'key_static_maps': os.environ.get('STATIC_MAPS_KEY'),
+            # 'key': current_app.config['MAPS_KEY'],
+            # 'key_static_maps': current_app.config['STATIC_MAPS_KEY'],
             'address': query.replace(" ", "%"),
             'region': "fr",
             'country': "fr"
@@ -44,6 +47,7 @@ class Maps_api:
     def get_map_url(self):
         coord = self.get_coord()
         coord_url = f"{coord['lat']},{coord['lng']}"
+        key_static_maps = os.environ.get('STATIC_MAPS_KEY')
         map_url = 'https://maps.googleapis.com/maps/api/staticmap?center=' + coord_url + '&zoom=15&size=400x400&markers=color:red%7C' + coord_url + '&key=' + key_static_maps
         return map_url
 

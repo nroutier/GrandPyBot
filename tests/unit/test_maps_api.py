@@ -1,5 +1,6 @@
 import pytest
 from app.main.classes.Maps_api import Maps_api
+import os
 
 def test_maps_api():
     """
@@ -12,3 +13,5 @@ def test_maps_api():
     assert place.get_address() == '7 Cité Paradis, 75010 Paris, France'
     assert place.get_route() == 'Cité Paradis'
     assert place.get_coord() == {'lat': 48.8747265, 'lng': 2.3505517}
+    key_static_maps = os.environ.get('STATIC_MAPS_KEY')
+    assert place.get_map_url() == "https://maps.googleapis.com/maps/api/staticmap?center=48.8747265,2.3505517&zoom=15&size=400x400&markers=color:red%7C48.8747265,2.3505517&key=" + key_static_maps
