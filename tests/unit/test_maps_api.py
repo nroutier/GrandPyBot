@@ -1,5 +1,5 @@
 import pytest
-from app.main.Maps_api import Maps_api
+from app.main.classes.Maps_api import Maps_api
 
 def test_maps_api():
     """

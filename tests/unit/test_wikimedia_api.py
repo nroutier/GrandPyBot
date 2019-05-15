@@ -1,5 +1,5 @@
 import pytest
-from app.main.Wikimedia_api import Wikimedia_api
+from app.main.classes.Wikimedia_api import Wikimedia_api
 
 def test_wikimedia_api():
     """
