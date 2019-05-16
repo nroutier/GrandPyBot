@@ -1,4 +1,3 @@
-import pytest
 from app.main.classes.Wikimedia_api import Wikimedia_api
 
 

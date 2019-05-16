@@ -1,18 +1,3 @@
-import pytest
-from app import create_app
-from config import Config
-
-class TestConfig(Config):
-    TESTING = True
-
-
-@pytest.fixture
-def test_client():
-    flask_app = create_app(TestConfig)
- 
-    testing_client = flask_app.test_client()
-
-    yield testing_client
  
 def test_home_page(test_client):
     """
