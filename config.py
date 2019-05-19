@@ -7,3 +7,4 @@ class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-is-secret'
     MAPS_KEY = os.environ.get('MAPS_KEY')
     STATIC_MAPS_KEY = os.environ.get('STATIC_MAPS_KEY')
+    LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
