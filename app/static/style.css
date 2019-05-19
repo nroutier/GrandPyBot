@@ -64,14 +64,14 @@ footer
 
 .user-dialog 
 {
-    color: black;
-    background-color: rgb(243, 237, 181);
+    color: #615F4E;
+    background-color: white;
+    opacity: 0.70;
     padding: 15px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    text-align: left;
 }
 
 .grandpy-dialog
