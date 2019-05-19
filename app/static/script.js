@@ -41,7 +41,7 @@ dialogForm.addEventListener("submit", e => {
                 map: map
             });
             let aboutUrl = document.createElement("a");
-            if (data.info_place_url == null) {
+            if (data.info_place_url == "") {
                 aboutUrl.textContent = "";
             } else {
                 aboutUrl.textContent = "[En savoir plus sur Wikipedia]";
