@@ -31,10 +31,16 @@ def returning_location():
         address_dialog = dialog.get_dialog("maps")
         info_place = wiki_req.get_about()
         if info_place:
+            info_place_text = info_place['about_text']
+            info_place_url = info_place['about_url']
             place_dialog = dialog.get_dialog("about")
         else:
+            info_place_text = ""
+            info_place_url = ""
             place_dialog = dialog.get_dialog("no_about")
     else:
+        info_place_text = ""
+        info_place_url = ""
         address = ""
         coord = ""
         route = ""
@@ -43,8 +49,8 @@ def returning_location():
         "name": place.capitalize(),
         "address": address,
         "coord": coord,
-        "info_place": info_place['about_text'],
-        "info_place_url": info_place['about_url'],
+        "info_place": info_place_text,
+        "info_place_url": info_place_url,
         "address_dialog": address_dialog,
         "place_dialog": place_dialog
     }
