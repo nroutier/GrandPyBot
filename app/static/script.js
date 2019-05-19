@@ -1,17 +1,15 @@
-function createDialDiv(content, cssClass) {
-    let divElt = document.createElement("div");
-    divElt.classList.add(cssClass);
-    divElt.appendChild(document.createTextNode(content));
-    let dialogSection = document.getElementById("dialog");
-    dialogSection.appendChild(divElt);
-}
-
-var dialogForm = document.querySelector("form");
+// Script that generates the dialogs beetween the user and GandPy using Ajax
+// let dialogForm = document.querySelector("form");
+let dialogForm = document.getElementById("queryForm");
 dialogForm.addEventListener("submit", e => {
     e.preventDefault();
-    createDialDiv(dialogForm.elements.place.value, "user-dialog");
-    let query = new FormData(dialogForm);
-        
+    document.getElementById("progress").classList.remove("d-none");
+    let divReq = document.createElement("div");
+    divReq.classList.add("user-dialog");
+    divReq.appendChild(document.createTextNode(dialogForm.elements.place.value));
+    let dialogSection = document.getElementById("dialog");
+    dialogSection.appendChild(divReq);
+    let query = new FormData(dialogForm);      
     fetch(`${window.origin}/query/`, {
         method: 'post',
         body: query,
@@ -25,11 +23,38 @@ dialogForm.addEventListener("submit", e => {
         }
         response.json().then(function(data) {
             console.log(data);
-            // createDialDiv(data.req, "grandpy-dialog")
-            createDialDiv(data.res, "grandpy-dialog")
+            let dialSection = document.getElementById("dialog");
+            let addressText = data.address_dialog;
+            let divAddress = document.createElement("div");
+            divAddress.classList.add("grandpy-dialog");
+            divAddress.appendChild(document.createTextNode(addressText + data.address));
+            dialSection.appendChild(divAddress);
+            let divMap = document.createElement("div");
+            divMap.classList.add("map");
+            dialSection.appendChild(divMap);
+            let map = new google.maps.Map(divMap, {
+                center: data.coord,
+                zoom: 15
+            });
+            let marker = new google.maps.Marker({
+                position: data.coord,
+                map: map
+            });
+            let aboutUrl = document.createElement("a");
+            aboutUrl.textContent = "[En savoir plus sur Wikipedia]";
+            aboutUrl.href = data.info_place_url;
+            let aboutGpyText =  data.place_dialog;
+            let aboutText = document.createTextNode(aboutGpyText + data.info_place + " ");
+            let divAbout = document.createElement("div");
+            divAbout.classList.add("grandpy-dialog");
+            divAbout.appendChild(aboutText);
+            divAbout.appendChild(aboutUrl);
+            dialogSection.appendChild(divAbout);         
+            document.getElementById("progress").classList.add("d-none");
+            document.getElementById("queryForm").reset();
         }); 
     })
     .catch(function(error) {
         console.log("Fetch error: " + error);
-    });    
+    });
 });

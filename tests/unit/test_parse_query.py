@@ -1,3 +1,5 @@
+""" Module that defines the TestParseQuery class """
+
 import pytest
 from app.main.classes.Parse_query import Parse_query
 
@@ -8,7 +10,7 @@ class TestParseQuery:
     THEN check the response is parsed correctly
     """
     question = "Salut GrandPy ! Est-ce que tu connais l'adresse d'OpenClassrooms ?"
-    query = Parse_query(question)
+    query = ParseQuery(question)
     
     def test_parse_query(self):
         assert self.query.parse_query() == 'openclassrooms'

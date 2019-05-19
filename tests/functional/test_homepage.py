@@ -1,4 +1,5 @@
- 
+""" Module that test the app routes """
+
 def test_home_page(test_client):
     """
     GIVEN a Flask application

@@ -5,14 +5,7 @@
         <section id="dialog"></section>
 
         <section id="askForm">
-            <!-- <form method="post">
-                <div class="form-group">
-                    <label for="place">Entrez un lieu ou une adresse:</label>
-                    <input type="text" class="form-control" name="place" id="place" placeholder="Ex: Openclassrooms ou 7 Cité Paradis, 75010 Paris" required/>
-                </div>
-                <button type="submit" class="btn btn-primary">Entrer</button>
-            </form> -->
-            <form action="" method="post">
+            <form id="queryForm" action="" method="post">
                 <!-- To be protected against CSRF attacks -->
                 {{ form.hidden_tag() }}
                 <div class="form-group">
@@ -21,6 +14,8 @@
                 </div>
                 {{ form.submit(class="btn btn-primary") }}
             </form>
+            <br />
+            <progress id="progress" class="d-none"></progress>
         </section>
     </section>
 {% endblock %}

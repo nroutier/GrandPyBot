@@ -1,8 +1,9 @@
+/* Stylesheet for GrandPy App */
+
 body
 {
     background-color: #8DD0EE;
     color: #615F4E;
-    margin: auto;
     min-height: 100vh;
 }
 
@@ -11,18 +12,21 @@ header
     text-align: center;
     background-color: #59727E;
     color: #E0D57A;
-    position: fixed;
 }
 
 section
 {
     text-align: center;
-    margin-top: 55px;
 }
 
 #dialog
 { 
     margin-top: 5px;
+}
+
+#askForm
+{
+    margin-top: 10px;
 }
 
 .content
@@ -61,15 +65,12 @@ footer
 .user-dialog 
 {
     color: black;
-    background-color: white;
-    /*width: 75%;*/
+    background-color: rgb(243, 237, 181);
     padding: 15px;
-    opacity: 0.5;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
-    /* margin-top: 10px; */
-    margin-top: 55px;
+    margin-top: 10px;
     text-align: left;
 }
 
@@ -78,12 +79,21 @@ footer
     color: black;
     background-color: white;
     opacity: 0.5;
-    /*width: 75%;*/
     padding: 15px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    text-align: right; 
+}
+
+.map
+{
+    height: 400px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
 }
 

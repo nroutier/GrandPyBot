@@ -1,0 +1,26 @@
+{
+    "maps": [
+        "Bien sûr mon poussin ! La voici : ",
+        "Mais oui mon grand ! Cela se trouve ici : ",
+        "Voilà l'adresse mon petit gars : ",
+        "Tu fais bien de demander ma bichette ! : "
+    ],
+    "no_maps": [
+        "Je ne vois pas trop, peux-tu préciser s'il te plait ? ",
+        "J'hésite, ma mémoire est floue... reformule ta question pour voir. ",
+        "Je ne vois pas du tout ce que tu recherches...",
+        "J'ai beau en savoir beaucoup, je sèche sur cette question..."
+    ],
+    "about": [
+        "Mais t'ai-je déjà raconté l'histoire de ce quartier qui m'a vu en culottes courtes ? ",
+        "Ah mon époque, le quartier n'etait pas ce qu'il est aujourd'hui, mais ces quelques informations sont toujours d'actualité ! ",
+        "Un peu d'histoire pour ta culture mon grand ! ",
+        "Si tu savais ce que j'ai pu faire comme farce dans ce quartier étant jeunot ! "
+    ],
+    "no_about": [
+        "Ma mémoire me fait défaut mon grand, je ne sais plus quoi te raconter sur cete adresse...",
+        "Je fatigue mon petit gars, une petite sieste me fera surement revenir la mémoire ! ",
+        "Hum..., non c'est pas ça l'histoire je confonds, je te raconterais quelque chose la prochaine fois !",
+        "A mes aieux, il fait pas bon vieillir, je ne me souviens plus des bétises que j'ai pu faire ici !"
+    ]
+}
