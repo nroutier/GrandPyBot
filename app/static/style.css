@@ -64,9 +64,10 @@ footer
 
 .user-dialog 
 {
-    color: #615F4E;
+    color: black;
+    font-weight: bold;
     background-color: white;
-    opacity: 0.70;
+    opacity: 0.80;
     padding: 15px;
     border-radius: 10px;
     margin-left: auto;
