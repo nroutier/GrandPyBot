@@ -1,6 +1,6 @@
 """ Module that defines the TestWikimediaApi class """
 
-from app.main.classes.Wikimedia_api import Wikimedia_api
+from app.main.classes.Wikimedia_api import WikimediaApi
 
 class TestWikimediaApi:
     """

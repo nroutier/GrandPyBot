@@ -1,7 +1,7 @@
 """ Module that defines the TestParseQuery class """
 
 import pytest
-from app.main.classes.Parse_query import Parse_query
+from app.main.classes.Parse_query import ParseQuery
 
 class TestParseQuery:
     """
