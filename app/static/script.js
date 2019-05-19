@@ -41,7 +41,11 @@ dialogForm.addEventListener("submit", e => {
                 map: map
             });
             let aboutUrl = document.createElement("a");
-            aboutUrl.textContent = "[En savoir plus sur Wikipedia]";
+            if (data.info_place_url == null) {
+                aboutUrl.textContent = "";
+            } else {
+                aboutUrl.textContent = "[En savoir plus sur Wikipedia]";
+            }
             aboutUrl.href = data.info_place_url;
             let aboutGpyText =  data.place_dialog;
             let aboutText = document.createTextNode(aboutGpyText + data.info_place + " ");
