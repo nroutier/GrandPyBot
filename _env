@@ -1,0 +1,6 @@
+FLASK_APP=grandpybot.py
+SECRET_KEY='secret-is-env-secret'
+NLTK_DATA=nltk_data
+MAPS_KEY='your-google-maps-geocoding-api-key'
+STATIC_MAPS_KEY='your-google-maps-javascript-api-key'
+LOG_TO_STDOUT='True in prod (heroku) False in dev (flask web server)'
