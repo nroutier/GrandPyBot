@@ -29,8 +29,8 @@ After cloning this repository in your local folder,
 
 To set up your virtual envirnment and install all the required modules, from the program folder in the terminal type :
 
-`pip3 install pipenv`
-`pipenv install`
+`pip3 install pipenv
+pipenv install`
 
 Then you have to define the required environment variables, you can do so either manually or renaming the `_env` file to `.env` then adapting the values to yours.
 
@@ -40,4 +40,4 @@ You are now able to launch the web app on your local machine with the following 
 
 ## Production deployment
 
-If you would like to deploy your app on a [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python), you will have to set up the envirnoment variables on the Heroku console, the Procfile is already set up to use a [gunicorn](https://gunicorn.org/) WSGI HTTP server.
+If you would like to deploy your app on [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python), you will have to set up the envirnoment variables on the Heroku console, the Procfile is already set up to use a [gunicorn](https://gunicorn.org/) WSGI HTTP server.
