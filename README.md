@@ -3,7 +3,7 @@
 GrandPyBot is a responsive web app that acts as a grand father to whcich the user is able to ask for the location of a known place or address.
 GrandPy will answer the user with the formatted address of the place, a map with a marker on the place's location and a short summury about the street where the place is located.
 
-![Overview](https://github.com/nroutier/GrandPyBot/blob/master/example.png){:height="75%" width="75%"}
+!(https://github.com/nroutier/GrandPyBot/blob/master/example.png)
 
 # Specifications
 
