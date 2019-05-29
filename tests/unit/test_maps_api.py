@@ -19,4 +19,5 @@ class TestMapsApi:
         assert self.place.get_route() == 'Cité Paradis'
 
     def test_get_coord(self):
-        assert self.place.get_coord() == {'lat': 48.8747265, 'lng': 2.3505517}
+        # assert self.place.get_coord() == {'lat': 48.8747265, 'lng': 2.3505517}
+        assert self.place.get_coord() == {'lat': 48.8748465, 'lng': 2.3504873}
