@@ -2,6 +2,7 @@
 
 from app.main.classes.Wikimedia_api import WikimediaApi
 
+
 class TestWikimediaApi:
     """
     GIVEN a coordinates and a route

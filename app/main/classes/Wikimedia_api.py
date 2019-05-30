@@ -3,8 +3,9 @@
 import wikipedia
 import re
 
+
 class WikimediaApi:
-    """ Class that interact with wikimedia api """ 
+    """ Class that interact with wikimedia api """
 
     def __init__(self, coord, route):
         """ Function that instanciate a WikimediaApi object """

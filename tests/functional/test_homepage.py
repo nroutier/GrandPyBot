@@ -1,5 +1,6 @@
 """ Module that test the app routes """
 
+
 def test_home_page(test_client):
     """
     GIVEN a Flask application
@@ -11,7 +12,8 @@ def test_home_page(test_client):
     assert 'GrandPy Bot' in response.get_data().decode('utf-8')
     assert 'Un papi qui en sait long en géographie !' in response.get_data().decode('utf-8')
 
-def  test_query_route(test_client):
+
+def test_query_route(test_client):
     """
     GIVEN a Flask application
     WHEN the '/query/' page is requested (POST)
@@ -19,6 +21,5 @@ def  test_query_route(test_client):
     """
     mock_request_data = {"query": "Salut GrandPy ! Est-ce que tu connais l'adresse d'OpenClassrooms ?"}
 
-    response = test_client.post('/query/', data = mock_request_data)
+    response = test_client.post('/query/', data=mock_request_data)
     assert response.status_code == 200
-

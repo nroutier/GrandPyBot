@@ -3,6 +3,7 @@
 from app.main.classes.Maps_api import MapsApi
 import os
 
+
 class TestMapsApi:
     """
     GIVEN a query

@@ -4,7 +4,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
-# import string
+
 
 class ParseQuery:
     """ Class used to parse a query and keep the useful words """
@@ -18,7 +18,6 @@ class ParseQuery:
         # Put query in lowercase and tokenize it keeping only words
         tokenizer = nltk.RegexpTokenizer(r'\w+')
         query = tokenizer.tokenize(self.query.lower())
-        # print(query)
         # Retrieve french stopwords
         sw = nltk.corpus.stopwords.words('french')
         greetings = ['yo', 'hello', 'hey', 'bonjour', 'salut', 'coucou', 'grandpy', 'stp', 'papi', 'papy']

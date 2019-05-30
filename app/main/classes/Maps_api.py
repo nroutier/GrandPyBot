@@ -5,6 +5,7 @@ import requests
 import json
 import os
 
+
 class MapsApi:
     """ Class used to get address, route and coordinates from Google Geocode Api """
 
@@ -18,7 +19,6 @@ class MapsApi:
         req = 'https://maps.googleapis.com/maps/api/geocode/json'
         r = requests.get(req, payload)
         self.res = r.json()
-       
 
     def get_address(self):
         if self.res:
@@ -39,7 +39,7 @@ class MapsApi:
             except:
                 route = ""
             return route
-    
+
     def get_coord(self):
         if self.res:
             try:

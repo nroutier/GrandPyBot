@@ -3,6 +3,7 @@
 import pytest
 from app.main.classes.Parse_query import ParseQuery
 
+
 class TestParseQuery:
     """
     GIVEN a query
@@ -11,6 +12,6 @@ class TestParseQuery:
     """
     question = "Salut GrandPy ! Est-ce que tu connais l'adresse d'OpenClassrooms ?"
     query = ParseQuery(question)
-    
+
     def test_parse_query(self):
         assert self.query.parse_query() == 'openclassrooms'

@@ -8,11 +8,12 @@ from app.main.classes.Maps_api import MapsApi
 from app.main.classes.Wikimedia_api import WikimediaApi
 from app.main.classes.Granpy_dialog import GrandpyDialog
 
+
 @bp.route('/')
 def index():
     """ Function that render the index page """
     form = QueryForm()
-    return render_template('index.html', form=form, static_maps_key = current_app.config['STATIC_MAPS_KEY'])
+    return render_template('index.html', form=form, static_maps_key=current_app.config['STATIC_MAPS_KEY'])
 
 
 @bp.route('/query/', methods=['POST'])
