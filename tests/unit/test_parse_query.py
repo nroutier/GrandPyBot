@@ -10,7 +10,8 @@ class TestParseQuery:
     WHEN the parse_query function is called woth the query as parameter
     THEN check the response is parsed correctly
     """
-    question = "Salut GrandPy ! Est-ce que tu connais l'adresse d'OpenClassrooms ?"
+    question = "Salut GrandPy ! Est-ce que tu connais l'adresse "\
+        "d'OpenClassrooms ?"
     query = ParseQuery(question)
 
     def test_parse_query(self):

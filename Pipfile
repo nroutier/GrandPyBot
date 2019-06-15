@@ -13,10 +13,10 @@ pytest = "*"
 flask-wtf = "*"
 nltk = "*"
 requests = "*"
-wikipedia = "*"
 coverage = "*"
 pylint = "*"
 gunicorn = "*"
+pymediawiki = "*"
 
 [requires]
 python_version = "3.7"

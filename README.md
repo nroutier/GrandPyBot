@@ -45,3 +45,18 @@ pipenv run flask run
 ## Production deployment
 
 If you would like to deploy your app on [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python), you will have to set up the envirnoment variables on the Heroku console, the `Procfile` is already set up to use a [gunicorn](https://gunicorn.org/) WSGI HTTP server.
+
+## Running tests
+
+### Tests
+```bash
+pipenv run pytest -v
+```
+
+### Coverage
+```bash
+pipenv run coverage run -m pytest
+pipenv run coverage html
+```
+
+

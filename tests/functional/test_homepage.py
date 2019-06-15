@@ -10,7 +10,8 @@ def test_home_page(test_client):
     response = test_client.get('/')
     assert response.status_code == 200
     assert 'GrandPy Bot' in response.get_data().decode('utf-8')
-    assert 'Un papi qui en sait long en géographie !' in response.get_data().decode('utf-8')
+    assert 'Un papi qui en sait long en '\
+        'géographie !' in response.get_data().decode('utf-8')
 
 
 def test_query_route(test_client):
@@ -19,7 +20,10 @@ def test_query_route(test_client):
     WHEN the '/query/' page is requested (POST)
     THEN check the response is valid
     """
-    mock_request_data = {"query": "Salut GrandPy ! Est-ce que tu connais l'adresse d'OpenClassrooms ?"}
+    query = {
+        "query": "Salut GrandPy ! Est-ce que tu connais l'adresse "
+        "d'OpenClassrooms ?"
+        }
 
-    response = test_client.post('/query/', data=mock_request_data)
+    response = test_client.post('/query/', data=query)
     assert response.status_code == 200

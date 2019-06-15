@@ -29,31 +29,33 @@ dialogForm.addEventListener("submit", e => {
             divAddress.classList.add("grandpy-dialog");
             divAddress.appendChild(document.createTextNode(addressText + data.address));
             dialSection.appendChild(divAddress);
-            let divMap = document.createElement("div");
-            divMap.classList.add("map");
-            dialSection.appendChild(divMap);
-            let map = new google.maps.Map(divMap, {
-                center: data.coord,
-                zoom: 15
-            });
-            let marker = new google.maps.Marker({
-                position: data.coord,
-                map: map
-            });
-            let aboutUrl = document.createElement("a");
-            if (data.info_place_url == "") {
-                aboutUrl.textContent = "";
-            } else {
-                aboutUrl.textContent = "[En savoir plus sur Wikipedia]";
+            if (data.coord !== "") {
+                let divMap = document.createElement("div");
+                divMap.classList.add("map");
+                dialSection.appendChild(divMap);
+                let map = new google.maps.Map(divMap, {
+                    center: data.coord,
+                    zoom: 15
+                });
+                let marker = new google.maps.Marker({
+                    position: data.coord,
+                    map: map
+                });
+                let aboutUrl = document.createElement("a");
+                if (data.info_place_url == "") {
+                    aboutUrl.textContent = "";
+                } else {
+                    aboutUrl.textContent = "[En savoir plus sur Wikipedia]";
+                }
+                aboutUrl.href = data.info_place_url;
+                let aboutGpyText =  data.place_dialog;
+                let aboutText = document.createTextNode(aboutGpyText + data.info_place + " ");
+                let divAbout = document.createElement("div");
+                divAbout.classList.add("grandpy-dialog");
+                divAbout.appendChild(aboutText);
+                divAbout.appendChild(aboutUrl);
+                dialogSection.appendChild(divAbout);
             }
-            aboutUrl.href = data.info_place_url;
-            let aboutGpyText =  data.place_dialog;
-            let aboutText = document.createTextNode(aboutGpyText + data.info_place + " ");
-            let divAbout = document.createElement("div");
-            divAbout.classList.add("grandpy-dialog");
-            divAbout.appendChild(aboutText);
-            divAbout.appendChild(aboutUrl);
-            dialogSection.appendChild(divAbout);         
             document.getElementById("progress").classList.add("d-none");
             document.getElementById("queryForm").reset();
         }); 
