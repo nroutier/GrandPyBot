@@ -40,7 +40,7 @@ class ParseQuery:
         # Stemm query words and keep only those that doesn't match
         # stem_verbs list
         stemmer = SnowballStemmer("french")
-        stem_verbs = ["con", "trouv", "situ", "montr", "peux", "sais"]
+        stem_verbs = ["con", "trouv", "situ", "montr", "peux", "sais", "don"]
         stem_process = []
         stem_process += [
             word for word in query if not stemmer.stem(word) in stem_verbs
